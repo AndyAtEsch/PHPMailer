@@ -4,6 +4,7 @@
  */
 
 //Import the PHPMailer class into the global namespace
+/*
 use PHPMailer\PHPMailer\PHPMailer;
 
 //SMTP needs accurate times, and the PHP time zone MUST be set
@@ -52,4 +53,11 @@ if (!$mail->send()) {
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
     echo 'Message sent!';
+}
+*/
+
+add_action( 'wp_footer', 'my_function' );
+
+function my_function() {
+  echo 'hello world';
 }
